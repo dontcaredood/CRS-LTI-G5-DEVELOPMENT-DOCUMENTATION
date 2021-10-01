@@ -9,11 +9,11 @@ export class User {
 
     constructor(...params){
         console.log("Student Model Class")
-        this.email = params[1]
-        this.name = params[2]
-        this.password = params[3]
-        this.gender = params[4]
-        this.address = params[5]
-        this.branchName = params[6]
+        this.email = params[0].email
+        this.name = params[0].name
+        this.password = params[0].password
+        this.gender = params[0].gender
+        this.address = params[0].address
+        this.branchName = params[0].branch
     }
 }

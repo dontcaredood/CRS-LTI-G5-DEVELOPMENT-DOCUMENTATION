@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+    <style>
+        table {
+  border-spacing: 30px;
+}
+        h1,h2,h3 {text-align: center;}
+        .center {
+            margin: auto;
+            width: 30%;
+            height : 40%;
+            border: 1px solid rgb(1, 19, 1);
+            padding: 10px;
+}
+    </style>
+</head>
+<body>
+    
+  
+
+
+
+   
+      <form class="form-horizontal" #studentRegister = "ngForm" (ngSubmit) = "onClickSubmit(studentRegister.value)">
+        <fieldset>
+          <div id="legend" class="control-group">
+            <legend class="">Student Register</legend>
+          </div>
+          <div class="control-group">
+            <!-- Username -->
+            <label class="control-label"  for="username">Name</label>
+            <div class="controls">
+              <input type="text" id="name" required name="name" placeholder="Enter name" class="input-xlarge" ngModel>
+            </div>
+          </div>
+       
+          <div class="control-group">
+            <!-- E-mail -->
+            <label class="control-label" for="email">E-mail</label>
+            <div class="controls">
+              <input type="text" id="email" required="true" name="email" placeholder="name@email.com" class="input-xlarge" ngModel>
+            </div>
+          </div>
+       
+          <div class="control-group">
+            <!-- Password-->
+            <label class="control-label" for="password">Password</label>
+            <div class="controls">
+              <input type="password" id="password"  name="password" placeholder="" ngModel class="input-xlarge" required>
+              <p class="help-block">Password should be at least 8 characters</p>
+            </div>
+          </div>
+       
+          <div class="control-group">
+            <!-- Password -->
+            <label class="control-label"  for="new-password">Password (Confirm)</label>
+            <div class="controls">
+              <input type="password" id="new-password" name="password2" placeholder="" ngModel class="input-xlarge" required>
+              <p class="help-block">Please confirm password</p>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <!-- Branch-->
+            <label class="control-label" required for="branch">Branch</label>
+            <div class="controls">
+                <select name="branch" id="branch" ngModel>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                  </select>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <!-- Gender-->
+            <label class="control-label" required for="gender">Gender</label>
+            <div class="controls">
+                <select name="gender" id="gender" ngModel>
+                    <option value="MALE">Male</option>
+                    <option value="FEMALE">Female</option>
+                    <option value="OTHER">Others</option>
+                  </select>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <!-- Address-->
+            <label class="control-label" for="address">Address</label>
+            <div class="controls">
+              <textarea id="address" required name="address" ngModel></textarea>
+            </div>
+          </div>
+       
+          <div class="control-group">
+            <!-- Button -->
+            <div class="controls">
+              <button class="btn btn-success">Register</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+
+      {{studentId}}
+    </body>
+    </html>
+    
