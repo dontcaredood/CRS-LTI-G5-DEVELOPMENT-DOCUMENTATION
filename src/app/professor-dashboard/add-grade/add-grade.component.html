@@ -1,0 +1,49 @@
+<div class="btn-success"> <h3>Add Grade </h3></div>
+<form  [formGroup]="myForm">
+   <div class="form-group">
+      <label for="studentId">Student Userid</label>
+      
+      <input  type="text" class="form-control" id="studentId"
+             required formControlName="studentId"  [(ngModel)]="model.studentId" name="studentId">
+             
+    </div>
+    <div *ngIf="myForm.controls['studentId'].invalid" class="alert">
+        <div *ngIf="myForm.controls['studentId'].errors.required" style="color: red;" >
+        Please enter studentId
+      </div>
+      </div>
+    
+
+    <div class="form-group">
+        <label for="courseCode">Course Code</label>
+        <input  type="text" class="form-control" id="courseCode"
+               required formControlName="courseCode" [(ngModel)]="model.courseCode" name="courseCode">
+      </div>
+
+      <div *ngIf="myForm.controls['courseCode'].invalid" class="alert">
+        <div *ngIf="myForm.controls['courseCode'].errors.required" style="color: red;">
+        Please enter courseCode
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="grade">Grade</label>
+        <input type="number" class="form-control" id="grade"
+               required
+               formControlName="grade" [(ngModel)]="model.grade" name="grade">
+      </div>
+
+      <div *ngIf="myForm.controls['grade'].invalid" class="alert">
+        <div *ngIf="myForm.controls['grade'].errors.required" style="color: red;">
+        Please enter Grade in Numbers
+      </div>
+      </div>
+
+      <button type="submit" class="btn btn-success" (click)="addGrade()">Add Grade</button>
+      
+    </form>
+
+    <div *ngIf="updateMessage" >
+    <h2>Grade Added Successfully</h2>    
+    </div>
+ 

@@ -1,0 +1,35 @@
+
+<div style="margin-top: 30px;"> <h3 style="color:slateblue;text-align: center;">View Courses</h3></div>
+<form ngForm >
+    <div class="form-group">
+      <label for="name" style="font-size: 20px;">Professor Userid</label>
+      <input type="text" class="form-control" id="name"
+             required
+             [(ngModel)]="listOfCourses.professorId" name="professorId" #name='ngModel'>
+    </div>
+      <button type="submit" class="btn btn-success" style="margin-top: 20px; margin-left: 700px;"  (click)="viewCourses()">View Course</button> 
+    </form>
+   <br>
+
+
+    <div class="container" style="margin-top: 30px;">
+        <table class="table table-bordered table-striped">
+         <thead>
+          <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Course Description</th>
+            <th>Professor ID</th>
+          </tr>
+          </thead>
+          <tbody>
+        <tr *ngFor="let item of listOfCourses" ng-repeat="item in listOfCourses">
+          <td>{{item.courseId}}</td>
+          <td>{{item.courseName}}</td>
+          <td>{{item.courseDescription}}</td>
+          <td>{{item.professorId}}</td>
+        </tr>
+  
+     </tbody>
+      </table>
+      </div> 
