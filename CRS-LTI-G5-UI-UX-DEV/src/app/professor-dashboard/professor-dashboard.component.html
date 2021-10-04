@@ -1,1 +1,35 @@
-<p>professor-dashboard works!</p>
+<!--<div style="text-align:center;">
+    
+    <h3>Professor Dashboard</h3>
+  </div>
+  <nav style="text-align:center;">
+    <button routerLink='/professorDashboardComponent/viewEnrolledStudents'>View Enrolled Students</button>
+    <button routerLink='/professorDashboardComponent/viewCourses'>View Courses</button>
+    <button routerLink='/professorDashboardComponent/addGrade'>Add Grade</button>
+  </nav>
+  <router-outlet></router-outlet>
+-->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+     <a class="navbar-brand"  style="margin-left: 50px;"href="#">   Professor Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" style="margin-left: 850px;">
+          <a class="nav-link" routerLink='/professorDashboardComponent/viewEnrolledStudents'><button type="button" class="btn btn-primary">Show Students</button></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" routerLink='/professorDashboardComponent/viewCourses'><button type="button" class="btn btn-primary">Show Courses</button></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" routerLink='/professorDashboardComponent/addGrade'><button type="button" class="btn btn-primary">Add Grade</button></a>
+          </li>
+
+      </ul>
+
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
