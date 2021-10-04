@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router'
 
 @Component({
   selector: 'app-professor-dashboard',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfessorDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
+ngOnInit(): void {
 
-  ngOnInit(): void {
+
+  }
+  viewEnrolledStudents(){
+    this.router.navigate(['viewEnrolledStudents'], {relativeTo:this.route});
+  }
+  viewCourses(){
+    this.router.navigate(['viewCourses'], {relativeTo:this.route});
+  }
+
+  addGrade()
+  {
+    this.router.navigate(['addGrade'],{relativeTo:this.route});
   }
 
 }
